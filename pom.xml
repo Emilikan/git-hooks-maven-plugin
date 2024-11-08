@@ -12,6 +12,13 @@
     <name>git-hooks-maven-plugin</name>
     <description>Git хуки с автоматической установкой</description>
 
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
     <prerequisites>
         <maven>3.0.0</maven>
     </prerequisites>
