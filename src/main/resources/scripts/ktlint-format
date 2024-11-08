@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# цвет текста
+YELLOW='\033[1;33m'
+NORMAL='\033[0m'
+
+if mvn help:describe -Dplugin=ktlint &> /dev/null; then
+    echo "Running ktlint format..."
+    mvn ktlint:format
+    if [ $? -eq 0 ]; then
+        echo "Ktlint format completed successfully."
+        exit 0
+    else
+        echo "Ktlint format found code issues or failed."
+        exit 1
+    fi
+else
+    echo -en "${YELLOW}Ktlint plugin is not installed or configured. Skipping check.${NORMAL}\n"
+    exit 0
+fi
