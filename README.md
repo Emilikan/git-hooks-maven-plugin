@@ -1,4 +1,6 @@
-# ao-common-git-hooks-maven-plugin #
+# git-hooks-maven-plugin #
+
+[![MIT Licence][licence-image]][licence-url]
 
 ## Краткое описание <a name="desc"></a> ##
 
@@ -92,3 +94,6 @@ mvn clean install
 
 ## Ссылки <a name="links"></a> ##
 [Документация maven по плагинам](https://maven.apache.org/guides/plugin/guide-java-plugin-development.html#Plugin_Naming_Convention_and_Apache_Maven_Trademark)
+
+[licence-image]: http://img.shields.io/npm/l/gulp-rtlcss.svg?style=flat
+[licence-url]: https://tldrlegal.com/license/mit-license
