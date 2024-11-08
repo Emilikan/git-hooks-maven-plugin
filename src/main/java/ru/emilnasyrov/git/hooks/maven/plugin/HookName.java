@@ -22,8 +22,8 @@ public enum HookName {
     PUSH_TO_CHECKOUT("push-to-checkout"), //
     PRE_AUTO_GC("pre-auto-gc"),
     POST_REWRITE("post-rewrite"),
-    SENDEMAIL_VALIDATE("sendemail-validate"),
-    FSMONITOR_WATCHMAN("fsmonitor-watchman"),
+    SEND_EMAIL_VALIDATE("sendemail-validate"),
+    FS_MONITOR_WATCHMAN("fsmonitor-watchman"),
     P4_CHANGELIST("p4-changelist"),
     P4_PREPARE_CHANGELIST("p4-prepare-changelist"),
     P4_POST_CHANGELIST("p4-post-changelist"),
