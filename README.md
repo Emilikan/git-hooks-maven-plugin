@@ -5,7 +5,9 @@
 ## Краткое описание <a name="desc"></a> ##
 
 Репозиторий с настроенными git хуками и maven плагином, который эти git хуки автоматически установит. 
-Подключи в проект и автоматически получи для всех разработчиков едино-настроенные git хуки.
+Подключи в проект и автоматически получи для всех разработчиков едино-настроенные git хуки. 
+Управляй этими хуками из одного места. Склонируй к себе этот репозиторий, 
+настрой деплой плагина в maven репозиторий своей компании и добавь свои скрипты
 
 ## Доступные скрипты
 1) ```ktlint-check``` - скрипт запускает проверку mvn ktlint:check. 
@@ -83,6 +85,7 @@ CONFIG_FILE="$GIT_DIR/hooks/pre-commit-config"
 CONFIG_FILE="$GIT_DIR/hooks/pre-push-config"
 ```
 И тд по аналогии
+
 4) Занести информацию в enum HookName, указать название файла
 
 ## Инструменты для разработчиков <a name="dev-tools"></a> ##
@@ -94,6 +97,7 @@ mvn clean install
 
 ## Ссылки <a name="links"></a> ##
 [Документация maven по плагинам](https://maven.apache.org/guides/plugin/guide-java-plugin-development.html#Plugin_Naming_Convention_and_Apache_Maven_Trademark)
+[Документация git hooks](https://git-scm.com/docs/githooks)
 
 [licence-image]: http://img.shields.io/npm/l/gulp-rtlcss.svg?style=flat
 [licence-url]: https://tldrlegal.com/license/mit-license

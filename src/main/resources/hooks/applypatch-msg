@@ -1,0 +1,24 @@
+#!/bin/bash
+
+GIT_DIR=$(git rev-parse --git-dir)
+CONFIG_FILE="$GIT_DIR/hooks/applypatch-msg-config"
+
+if [[ -f "$CONFIG_FILE" ]]; then
+    scripts=()
+    while IFS= read -r line; do
+        scripts+=("$line")
+    done < "$CONFIG_FILE"
+fi
+
+for script in "${scripts[@]}"; do
+    if [[ -f "$GIT_DIR/hooks/$script" ]]; then
+        bash "$GIT_DIR/hooks/$script"
+        if [ $? -ne 0 ]; then
+            echo "Script $script failed."
+            exit 1
+        fi
+    else
+        echo "Script $script not found."
+        exit 1
+    fi
+done
