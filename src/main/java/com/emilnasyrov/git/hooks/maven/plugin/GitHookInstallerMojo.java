@@ -1,11 +1,11 @@
-package ru.emilnasyrov.git.hooks.maven.plugin;
+package com.emilnasyrov.git.hooks.maven.plugin;
 
+import com.emilnasyrov.git.hooks.maven.plugin.exception.ValidateMojoException;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.apache.maven.plugins.annotations.Parameter;
-import ru.emilnasyrov.git.hooks.maven.plugin.exception.ValidateMojoException;
 
 import java.io.File;
 import java.io.IOException;

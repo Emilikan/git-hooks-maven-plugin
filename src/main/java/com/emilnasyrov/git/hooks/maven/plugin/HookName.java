@@ -1,4 +1,4 @@
-package ru.emilnasyrov.git.hooks.maven.plugin;
+package com.emilnasyrov.git.hooks.maven.plugin;
 
 import java.util.Arrays;
 

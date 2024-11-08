@@ -1,4 +1,4 @@
-package ru.emilnasyrov.git.hooks.maven.plugin.exception;
+package com.emilnasyrov.git.hooks.maven.plugin.exception;
 
 import org.apache.maven.plugin.MojoExecutionException;
 

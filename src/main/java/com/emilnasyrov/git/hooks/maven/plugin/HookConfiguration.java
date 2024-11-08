@@ -1,6 +1,6 @@
-package ru.emilnasyrov.git.hooks.maven.plugin;
+package com.emilnasyrov.git.hooks.maven.plugin;
 
-import ru.emilnasyrov.git.hooks.maven.plugin.exception.ValidateMojoException;
+import com.emilnasyrov.git.hooks.maven.plugin.exception.ValidateMojoException;
 
 import java.util.ArrayList;
 import java.util.List;
