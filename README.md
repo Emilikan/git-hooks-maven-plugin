@@ -16,6 +16,8 @@
 2) ```ktlint-format``` - скрипт запускает форматирование кода mvn ktlint:format.
    Если плагин ktlint в проекте не установлен - проекрка будет пропущена
 
+Просмотреть доступные хуки можно тут: [хуки](https://github.com/Emilikan/git-hooks-maven-plugin/blob/main/HOOKS.md)
+
 ## Подключить плагин
 В проекте для подключения плагина в pom.xml
 
