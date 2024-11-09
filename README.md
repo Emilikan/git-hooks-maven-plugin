@@ -23,8 +23,8 @@
 <build>
     <plugins>
         <plugin>
-            <groupId>ru.qiwi.ao-common</groupId>
-            <artifactId>ao-common-git-hooks-maven-plugin</artifactId>
+            <groupId>com.emilnasyrov</groupId>
+            <artifactId>git-hooks-maven-plugin</artifactId>
             <version>${git-hooks-maven-plugin.version}</version>
             <executions>
                 <execution>
@@ -38,7 +38,7 @@
                     <hook>
                         <name>pre-commit</name>
                         <scripts>
-                            <script>check-platform-version</script>
+                            <script>ktlint-check</script>
                         </scripts>
                     </hook>
                 </hooks>

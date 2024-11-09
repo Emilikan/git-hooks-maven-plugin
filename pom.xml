@@ -28,13 +28,13 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.version>3.9.0</maven.version>
+
         <maven-core.version>3.9.9</maven-core.version>
         <spotbugs-maven-plugin.version>4.8.5.0</spotbugs-maven-plugin.version>
-        <maven.deploy.plugin.version>2.7</maven.deploy.plugin.version>
-        <maven.deploy.skip>false</maven.deploy.skip>
-        <wagon.webdav.jackrabbit.version>2.4</wagon.webdav.jackrabbit.version>
         <maven-plugin-annotations.version>3.15.1</maven-plugin-annotations.version>
-        <maven-plugin-testing-harness.version>3.3.0</maven-plugin-testing-harness.version>
+        <spotbugs-skip-checks>false</spotbugs-skip-checks>
+        <junit.version>5.11.3</junit.version>
+        <maven-plugin-plugin.version>3.15.1</maven-plugin-plugin.version>
     </properties>
 
     <dependencies>
@@ -49,6 +49,19 @@
             <artifactId>maven-core</artifactId>
             <version>${maven-core.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -61,7 +74,7 @@
                     <effort>Max</effort>
                     <threshold>Low</threshold>
                     <failOnError>true</failOnError>
-                    <skip>${skipChecks}</skip>
+                    <skip>${spotbugs-skip-checks}</skip>
                 </configuration>
                 <executions>
                     <execution>
@@ -76,6 +89,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-plugin-plugin</artifactId>
+                <version>${maven-plugin-plugin.version}</version>
             </plugin>
         </plugins>
     </build>
